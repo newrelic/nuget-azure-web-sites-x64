@@ -92,7 +92,7 @@ Import-Module (Join-Path $modulesPath global_config.psm1) -Force
 			}
 			
 			It "Should have version element with value $agentVersion" {
-				$node.version | Should be $agentVersion
+				$node.version | Should be "2.15.186.1"
 			}
 			
 			It "Should have title element with value New Relic for Windows Azure Web Sites (x64)" {
@@ -154,11 +154,6 @@ Import-Module (Join-Path $modulesPath global_config.psm1) -Force
 			
 			It "Should have file element for install.ps1" {
 				$result = $nuspecXml.SelectSingleNode("//e:file[@src = 'tools\install.ps1']", $ns)
-				$result.src | Should be $result.target
-			}
-			
-			It "Should have file element for NewRelicHelper.psm1" {
-				$result = $nuspecXml.SelectSingleNode("//e:file[@src = 'tools\NewRelicHelper.psm1']", $ns)
 				$result.src | Should be $result.target
 			}
 			

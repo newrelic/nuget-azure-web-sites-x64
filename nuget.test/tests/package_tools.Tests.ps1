@@ -12,8 +12,4 @@ Import-Module (Join-Path $modulesPath global_config.psm1) -Force
 			(Test-Path $PackageRoot\tools\uninstall.ps1) | Should Be $true
 		}
 		
-		It "checks to see if tools\NewRelicHelper.psm1 exists" {
-			(Test-Path $PackageRoot\tools\NewRelicHelper.psm1) | Should Be $true
-		}
-		
     }

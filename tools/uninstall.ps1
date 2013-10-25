@@ -1,7 +1,5 @@
 param($installPath, $toolsPath, $package, $project)
 
-Import-Module (Join-Path $toolsPath NewRelicHelper.psm1)
-
 Write-Host "***Cleaning up the newrelic.config file ***"  -ForegroundColor DarkGreen
 # manually remove newrelic.config since the Nuget uninstaller won't due to it being "modified"
 Try{
