@@ -8,7 +8,7 @@ if($extensionFile -ne $null){
 Write-Host "***Package install is complete***" -ForegroundColor DarkGreen
 
 Write-Host "Please make sure to go add the following configurations to your Azure website prior to deploying to Azure." -ForegroundColor DarkGreen
-Write-Host "1. Go to manage.windowsazure.com, log in, navigate to your Web Site and choose 'configure'"  -ForegroundColor DarkGreen
+Write-Host "1. Go to manage.windowsazure.com, log in, navigate to your Web App and choose 'configure'"  -ForegroundColor DarkGreen
 
 Write-Host "2. Navigate to the 'Developer Analytics' section and enable 'Performance Monitoring' by either:" -ForegroundColor DarkGreen
 Write-Host "	a. choosing 'ADD-ON' and selecting an existing New Relic add-on" -ForegroundColor DarkGreen
@@ -21,6 +21,6 @@ Write-Host "Key					Value"
 Write-Host "---------------------------------------"
 Write-Host "COR_ENABLE_PROFILING	1"
 Write-Host "COR_PROFILER			{71DA0A04-7777-4EC6-9643-7D28B46A8A41}"
-Write-Host "COR_PROFILER_PATH		C:\Home\site\wwwroot\newrelic\NewRelic.Profiler.dll"
-Write-Host "NEWRELIC_HOME			C:\Home\site\wwwroot\newrelic"
+Write-Host "COR_PROFILER_PATH		D:\Home\site\wwwroot\newrelic\NewRelic.Profiler.dll"
+Write-Host "NEWRELIC_HOME			D:\Home\site\wwwroot\newrelic"
 Write-Host "NEWRELIC_LICENSEKEY		[REPLACE WITH YOUR LICENSE KEY]"
